@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/dinamica1", "destination": "/dinamica1.html" }
+  ]
+}
