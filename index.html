@@ -62,16 +62,34 @@
 
     a { text-decoration: none; color: inherit; }
 
+    /* ── VIDEO BG ── */
+    .bg-video-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+    }
+    .bg-video-wrap video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%) scale(1.12);
+      filter: blur(14px) saturate(1.15) brightness(0.55);
+    }
+
     /* ── GLOW BG ── */
     .bg-glow {
       position: fixed;
       inset: 0;
-      z-index: 0;
+      z-index: -1;
       pointer-events: none;
       background:
-        radial-gradient(ellipse 75% 55% at 50% 5%, rgba(244,166,28,0.28) 0%, transparent 70%),
-        radial-gradient(ellipse 55% 45% at 50% 100%, rgba(37,211,102,0.08) 0%, transparent 70%),
-        repeating-conic-gradient(from 0deg at 50% 8%, rgba(255,210,92,0.05) 0deg 6deg, transparent 6deg 12deg);
+        radial-gradient(ellipse 75% 55% at 50% 5%, rgba(244,166,28,0.30) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 45% at 50% 100%, rgba(37,211,102,0.10) 0%, transparent 70%),
+        linear-gradient(180deg, rgba(14,26,56,0.55) 0%, rgba(14,26,56,0.75) 50%, rgba(14,26,56,0.9) 100%);
     }
 
     /* ── MAIN ── */
@@ -262,6 +280,11 @@
 </head>
 <body>
 
+<div class="bg-video-wrap">
+  <video autoplay muted loop playsinline preload="auto" poster="miguelito-dinamicas-logo.png">
+    <source src="bg-loop.mp4" type="video/mp4" />
+  </video>
+</div>
 <div class="bg-glow"></div>
 
 <main>
