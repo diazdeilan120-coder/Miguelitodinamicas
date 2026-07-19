@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2042259893830153');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2042259893830153&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="miguelito-dinamicas-logo.png" />
+  <title>Miguelito Dinámicas — Dinámicas diarias por WhatsApp</title>
+  <meta name="description" content="Sorteos todos los días. Premios reales. Entrega inmediata. Únete al grupo de WhatsApp de Miguelito Dinámicas." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #F4A61C;
+      --gold-light: #FFD25C;
+      --orange: #F58A1F;
+      --navy: #0E1A38;
+      --navy-light: #16244A;
+      --green: #25D366;
+      --green-dark: #1aad53;
+      --black: #0a0a0a;
+      --text: #fff6e6;
+      --muted: #b9ac8d;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── GLOW BG ── */
+    .bg-glow {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 75% 55% at 50% 5%, rgba(244,166,28,0.28) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 45% at 50% 100%, rgba(37,211,102,0.08) 0%, transparent 70%),
+        repeating-conic-gradient(from 0deg at 50% 8%, rgba(255,210,92,0.05) 0deg 6deg, transparent 6deg 12deg);
+    }
+
+    /* ── MAIN ── */
+    main {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    /* ── LOGO ── */
+    .logo {
+      width: 8.5rem;
+      height: 8.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 40px rgba(244,166,28,0.45);
+    }
+
+    /* ── BRAND ── */
+    .brand {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.3rem, 10vw, 4rem);
+      letter-spacing: 0.01em;
+      line-height: 1.05;
+      background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 55%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 4px 18px rgba(244,166,28,0.25);
+    }
+    .brand-sub {
+      font-size: clamp(0.75rem, 3vw, 0.9rem);
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+
+    /* ── ALERT BOX ── */
+    .alert-box {
+      background: rgba(244,166,28,0.06);
+      border: 1px solid rgba(244,166,28,0.28);
+      border-radius: 1rem;
+      padding: 1.5rem 1.75rem;
+      max-width: 28rem;
+      width: 100%;
+      text-align: left;
+    }
+    .alert-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .alert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .alert-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: clamp(0.9rem, 3.5vw, 1rem);
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .alert-list .icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    .alert-list strong { color: var(--gold-light); }
+
+    /* ── CTA ── */
+    .cta-wrap {
+      width: 100%;
+      max-width: 28rem;
+    }
+    .cta-question {
+      font-size: clamp(1rem, 4vw, 1.15rem);
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .btn-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      background: var(--green);
+      color: #fff;
+      font-size: clamp(1.1rem, 5vw, 1.4rem);
+      font-weight: 700;
+      padding: 1.25rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 40px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+    }
+    .btn-wa:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 50px rgba(37,211,102,0.5);
+    }
+    .btn-wa:active { transform: scale(0.98); }
+    .btn-wa svg { width: 1.6rem; height: 1.6rem; flex-shrink: 0; }
+
+    .btn-note {
+      margin-top: 0.65rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(244,166,28,0.15);
+      padding: 1.5rem 1.5rem;
+      text-align: center;
+    }
+    .social-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .social-btn {
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .social-btn:hover { transform: translateY(-3px); opacity: 0.88; }
+    .social-btn svg { width: 1.15rem; height: 1.15rem; }
+    .social-btn.instagram { background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%); }
+    .social-btn.facebook { background: #1877F2; }
+    .social-btn.tiktok { background: var(--navy-light); border: 1px solid rgba(244,166,28,0.25); }
+
+    .footer-copy { font-size: 0.7rem; color: var(--muted); }
+
+    /* ── FLOATING WA ── */
+    .wa-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 50;
+      width: 3.25rem;
+      height: 3.25rem;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: transform 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float svg { width: 1.6rem; height: 1.6rem; }
+
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 8px 40px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 8px 60px rgba(37,211,102,0.7); }
+    }
+    .btn-wa { animation: pulse-green 2.5s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<main>
+  <!-- Logo -->
+  <img src="miguelito-dinamicas-logo.png" alt="Miguelito Dinámicas" class="logo" />
+
+  <!-- Brand -->
+  <div>
+    <div class="brand">Miguelito<br>Dinámicas</div>
+    <div class="brand-sub">Dinámicas diarias por WhatsApp</div>
+  </div>
+
+  <!-- Info box -->
+  <div class="alert-box">
+    <p class="alert-title">⚠️ Lee antes de entrar ⚠️</p>
+    <ul class="alert-list">
+      <li><span class="icon">🔥</span> Sorteos en vivo <strong>todos los días</strong></li>
+      <li><span class="icon">💰</span> Solo necesitas <strong>2 cifras</strong> para ganar</li>
+      <li><span class="icon">🎯</span> <strong>4 oportunidades</strong> de ganar por sorteo</li>
+      <li><span class="icon">✅</span> Pagos <strong>inmediatos</strong> y comprobados</li>
+    </ul>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <p class="cta-question">¿Estás listo para ganar hoy?</p>
+    <a
+      href="https://chat.whatsapp.com/LCiCaCT6DbUFIXC8qqM9TE"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-wa"
+      onclick="fbq('track', 'Lead')"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      📲 ENTRAR AL GRUPO AHORA
+    </a>
+    <p class="btn-note">Gratis · Sin costo · Solo WhatsApp</p>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="social-row">
+    <a href="https://www.facebook.com/share/14asRKRW1TY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@miguelito.dinamicas" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/miguelitodinamicas?igsh=aHJ4eGY4Y3VtOHJs&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span id="year"></span> Miguelito Dinámicas. Todos los derechos reservados.</p>
+</footer>
+
+<!-- FLOATING WA -->
+<a
+  href="https://chat.whatsapp.com/LCiCaCT6DbUFIXC8qqM9TE"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WhatsApp"
+  class="wa-float"
+  onclick="fbq('track', 'Lead')"
+>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
